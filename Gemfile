@@ -32,6 +32,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'simple_form'
+
+gem 'foundation-rails'
+
 
 group :test, :development do
   gem "factory_girl_rails"

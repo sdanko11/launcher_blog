@@ -1,0 +1,17 @@
+<h1>Journal Entrys</h1>
+<% @all_posts.each do |post| %>
+<ul style="list-style:none"> 
+<li>
+  <b><%= post.title %></b>
+</li>
+<li>
+  <%= post.post %>
+</li>
+<li>
+  <%= post.created_at.strftime("%B-%d-%Y") %>
+</li>
+<li>
+  <%= post.created_at.strftime("%I:%M%P") %>
+</li>
+</ul>
+<% end %>

@@ -1,0 +1,10 @@
+Create a New Blog Post
+
+<hr>
+<%= form_for(@blog_post) do |f| -%>
+        <%= f.label :title %>
+        <%= f.text_field(:title) %><br />
+        <%= f.label :post %>
+        <%= f.text_field(:post)  %><br />
+<%= f.submit 'Save'  %>
+<% end-%>

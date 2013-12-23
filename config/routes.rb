@@ -2,6 +2,8 @@ LauncherBlog::Application.routes.draw do
   get "blog_post/index"
 
   resources :blog_posts
+  resources :categories
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

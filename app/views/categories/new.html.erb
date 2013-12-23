@@ -1,0 +1,9 @@
+Create a New Category
+<hr>
+<%= form_for(@create_category) do |f| -%>
+        <%= f.label :name %>
+        <%= f.text_field(:name) %><br />
+<%= f.submit 'Save', class: "button" %>
+<br>
+<%=flash[:error] %>
+<% end -%>

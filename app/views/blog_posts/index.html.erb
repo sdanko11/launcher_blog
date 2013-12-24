@@ -1,6 +1,10 @@
+   <div class="row">
+    <div class="small-">
+      <div class="row">
+         <div class="large-6 columns">
 <h1>Journal Entrys</h1>
 <br>
-<%= link_to 'Create new Post','/blog_posts/new', class: "button" %> <%= link_to 'Add New Category','/categories/new', class: "button" %> 
+<%= link_to 'Create new Post','/blog_posts/new', class: "button" %> <%= link_to 'Add New Category','/categories/new', class: "button [tiny]" %> 
 <br>
 <br>
 <%= flash[:notice] %>
@@ -21,3 +25,7 @@
   <%= link_to 'Delete', post, method: :delete %>
 </ul>
 <% end %>
+    </div>
+      </div>
+    </div>
+  </div>

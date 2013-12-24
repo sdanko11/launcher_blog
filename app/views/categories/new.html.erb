@@ -1,3 +1,8 @@
+   <div class="row">
+    <div class="large-">
+      <div class="row">
+         <div class="large-6 columns">
+<br>
 Create a New Category
 <br>
 <br>
@@ -11,14 +16,16 @@ Create a New Category
 <%=flash[:error] %>
 <% end -%>
 <% if @categories.count > 0 %>
+<br>
 All Categories
 <br>
 <% @categories.each do |category| %>
 <br>
-  <%= category.name %>
+  <%= category.name %> <%= link_to 'Edit', edit_category_path(category)%>
 <br>
-<%= link_to 'Edit', edit_category_path(category)%>
-<br>
-<%= link_to 'Delete', category, method: :delete %>
 <% end %>
 <% end %>
+     </div>
+      </div>
+    </div>
+  </div>

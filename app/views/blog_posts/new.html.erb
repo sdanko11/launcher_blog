@@ -1,11 +1,17 @@
-Create a New Blog Post
+   <div class="row">
+    <div class="large-">
+      <div class="row">
+         <div class="large-6 columns">
+<br>
+          Create a New Blog Post
+
 <br>
 <br>
 <%= link_to 'Home', '/blog_posts'%>
 <hr>
 <%= form_for(@blog_post) do |f| -%>
         <%= f.label :title %>
-        <%= f.text_field(:title) %><br />
+        <%= f.text_field(:title)%><br />
         <%= f.label :post %>
         <%= f.text_field(:post)  %><br />
         <%= f.label :category_id %>
@@ -15,3 +21,7 @@ Create a New Blog Post
 <br>
 <%=flash[:notice] %>
 <% end -%>
+     </div>
+      </div>
+    </div>
+  </div>

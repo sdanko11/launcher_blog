@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  has_many :blog_posts
+  has_many :blog_posts, dependent: :destroy
   validates_presence_of :name
   validates_uniqueness_of :name
 end

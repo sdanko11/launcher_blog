@@ -12,7 +12,9 @@
 <li>
   <%= post.post %>
 </li>
+<%if post.category != nil %>
  Category: <%= post.category.name %>
+ <% end%> 
 <li>
   <%= post.created_at.strftime("%B-%d-%Y") %>
 </li>

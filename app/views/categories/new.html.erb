@@ -1,9 +1,21 @@
 Create a New Category
 <hr>
-<%= form_for(@create_category) do |f| -%>
+<%= form_for(@category) do |f| -%>
         <%= f.label :name %>
         <%= f.text_field(:name) %><br />
 <%= f.submit 'Save', class: "button" %>
 <br>
 <%=flash[:error] %>
 <% end -%>
+<% if @categories.count > 0 %>
+All Categories
+<br>
+<% @categories.each do |category| %>
+<br>
+  <%= category.name %>
+<br>
+<%= link_to 'Edit', category%>
+<br>
+<%= link_to 'Delete', category, method: :delete %>
+<% end %>
+<% end %>

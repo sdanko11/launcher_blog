@@ -11,8 +11,6 @@
 <li>
   <%= post.created_at.strftime("%B-%d-%Y") %>
 </li>
-<li>
-  <%= post.created_at.strftime("%I:%M%P") %>
-</li>
+  <%= link_to 'Delete', post, method: :delete %>
 </ul>
 <% end %>

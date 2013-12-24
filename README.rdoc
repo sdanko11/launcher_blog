@@ -1,3 +1,5 @@
 This is a journal application.
 
-It lets you can add posts with title and categories.
+It lets you can add posts with titles and categories.
+
+It will save the date the post was created.

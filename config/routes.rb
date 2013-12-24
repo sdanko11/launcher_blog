@@ -1,6 +1,7 @@
 LauncherBlog::Application.routes.draw do
   get "blog_post/index"
 
+  root 'blog_posts#index'
   resources :blog_posts
   resources :categories
   

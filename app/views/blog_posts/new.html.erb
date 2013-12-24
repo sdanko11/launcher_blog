@@ -1,5 +1,4 @@
 Create a New Blog Post
-
 <hr>
 <%= form_for(@blog_post) do |f| -%>
         <%= f.label :title %>
@@ -7,7 +6,8 @@ Create a New Blog Post
         <%= f.label :post %>
         <%= f.text_field(:post)  %><br />
         <%= f.label :category_id %>
-        <%= f.collection_select :category_id, Category.all, :id, :name, :include_blank => 'No Category' %>
+        <%= f.collection_select :category_id, Category.all, :id, :name, :include_blank => 'No Category' 
+        %>
 <%= f.submit 'Save', class: "button" %>
 <br>
 <%=flash[:notice] %>

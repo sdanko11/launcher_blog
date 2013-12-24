@@ -1,4 +1,8 @@
 <h1>Journal Entrys</h1>
+<br>
+<%= link_to 'Create new Post','/blog_posts/new', class: "button" %> <%= link_to 'Add New Category','/categories/new', class: "button" %> 
+<br>
+<br>
 <%= flash[:notice] %>
 <% @all_posts.each do |post| %>
 <ul style="list-style:none"> 

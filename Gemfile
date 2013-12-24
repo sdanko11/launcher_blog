@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,6 +41,8 @@ gem 'foundation-rails'
 group :test, :development do
   gem "factory_girl_rails"
   gem "shoulda-matchers"
+  gem "better_errors"
+  gem "binding_of_caller"
   gem "capybara"
   gem "rspec-rails"
   gem "valid_attribute"

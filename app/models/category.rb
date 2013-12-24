@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  has_many :blog_posts
+  belongs_to :blog_post
   validates_presence_of :name
   validates_uniqueness_of :name
 end

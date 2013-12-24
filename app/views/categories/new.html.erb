@@ -14,7 +14,7 @@ All Categories
 <br>
   <%= category.name %>
 <br>
-<%= link_to 'Edit', category%>
+<%= link_to 'Edit', edit_category_path(category)%>
 <br>
 <%= link_to 'Delete', category, method: :delete %>
 <% end %>

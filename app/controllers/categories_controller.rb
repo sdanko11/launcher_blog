@@ -17,8 +17,8 @@ class CategoriesController < ApplicationController
     else 
       flash.now[:error] = "Please Enter a Unique Category" 
       render :new
-      end
     end
+  end
 
   def edit
     @category = Category.find(params[:id])

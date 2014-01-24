@@ -16,7 +16,7 @@ class BlogPostsController < ApplicationController
     else 
       flash.now[:notice] = "Please Enter a Title and Content" 
       render :new
-      end
+    end
   end
 
   def destroy

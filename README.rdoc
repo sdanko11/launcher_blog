@@ -1,5 +1,7 @@
-This is a journal application.
+This is a practice rails application for Launch Academy.
 
-It lets you can add posts with titles and categories.
+This is a journal application, the core functionality of the app:
 
-It will save the date the post was created.
+-add a categories
+-add journal entries, with the ability to add a optional category
+-delete journal entries, you no longer want

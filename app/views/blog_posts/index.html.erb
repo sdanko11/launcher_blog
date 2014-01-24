@@ -2,31 +2,20 @@
   <div class="small-">
     <div class="row">
         <div class="large-6 columns">
-
-<h1>Journal Entrys</h1>
-<br>
-<%= link_to 'Create new Post','/blog_posts/new', class: "button" %> <%= link_to 'Add New Category','/categories/new', class: "button [tiny]" %> 
-<br>
-<br>
-<%= flash[:notice] %>
-<% @all_posts.each do |post| %>
-<ul style="list-style:none"> 
-<li>
-  <b><%= post.title %></b>
-</li>
-<li>
-  <%= post.post %>
-</li>
-<%if post.category != nil %>
- Category: <%= post.category.name %>
- <% end%> 
-<li>
-  <%= post.created_at.strftime("%B-%d-%Y") %>
-</li>
-  <%= link_to 'Delete', post, method: :delete %>
-</ul>
-<% end %>
-
+          <h1>Journal Entrys</h1>
+          <%= link_to 'Create new Post','/blog_posts/new', class: "button" %> <%= link_to 'Add New Category','/categories/new', class: "button [tiny]" %> 
+          <%= flash[:notice] %>
+          <% @all_posts.each do |post| %>
+          <ul style="list-style:none"> 
+            <li><b><%= post.title %></b></li>
+            <li><%= post.post %></li>
+            <%if post.category != nil %>
+              Category: <%= post.category.name %>
+            <% end%> 
+            <li><%= post.created_at.strftime("%B-%d-%Y") %></li>
+            <%= link_to 'Delete', post, method: :delete %>
+          </ul>
+        <% end %>
      </div>
     </div>
   </div>

@@ -24,7 +24,7 @@ class BlogPostsController < ApplicationController
     @blog_post.delete
     redirect_to blog_posts_path
   end
-
+  
   def blog_post_params
     params.require(:blog_post).permit(:title, :post, :created_at, :category_id)
   end

@@ -2,27 +2,18 @@
   <div class="large-">
     <div class="row">
       <div class="large-6 columns">
-        <br>
-
-Create a New Blog Post
-
-<br>
-<br>
-<%= link_to 'Home', '/blog_posts'%>
-<hr>
-<%= form_for(@blog_post) do |f| -%>
-        <%= f.label :title %>
-        <%= f.text_field(:title)%><br />
-        <%= f.label :post %>
-        <%= f.text_field(:post)  %><br />
-        <%= f.label :category_id %>
-        <%= f.collection_select :category_id, Category.all, :id, :name, :include_blank => 'No Category' 
-        %>
-<%= f.submit 'Save', class: "button" %>
-<br>
-<%=flash[:notice] %>
-<% end -%>
-
+        <h1>Create a New Blog Post</h1>
+        <%= link_to 'Home', '/blog_posts'%>
+        <%= form_for(@blog_post) do |f| -%>
+          <%= f.label :title %>
+          <%= f.text_field(:title)%><br />
+          <%= f.label :post %>
+          <%= f.text_field(:post)  %><br />
+          <%= f.label :category_id %>
+        <%= f.collection_select :category_id, Category.all, :id, :name, :include_blank => 'No Category'%>
+          <%= f.submit 'Save', class: "button" %>
+          <%=flash[:notice] %>
+      <% end %>
      </div>
     </div>
   </div>

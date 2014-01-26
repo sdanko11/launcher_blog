@@ -1,31 +1,22 @@
-   <div class="row">
-    <div class="large-">
-      <div class="row">
-         <div class="large-6 columns">
-<br>
-Create a New Category
-<br>
-<br>
-<%= link_to 'Home', '/blog_posts'%>
-<hr>
-<%= form_for(@category) do |f| -%>
-        <%= f.label :name %>
-        <%= f.text_field(:name) %><br />
-<%= f.submit 'Save', class: "button" %>
-<br>
-<%=flash[:error] %>
-<% end -%>
-<% if @categories.count > 0 %>
-<br>
-All Categories
-<br>
-  <% @categories.each do |category| %>
-<br>
-  <%= category.name %> <%= link_to 'Edit', edit_category_path(category)%>
-<br>
-  <% end %>
-<% end %>
-
+<div class="row">
+<div class="large-">
+  <div class="row">
+     <div class="large-6 columns">
+        <h1>Create a New Category</h1>
+        <%= link_to 'Home', '/blog_posts'%>
+        <%= form_for(@category) do |f| -%>
+          <%= f.label :name %>
+          <%= f.text_field(:name) %>
+          <%= f.submit 'Save', class: "button" %>
+          <%=flash[:error] %>
+        <% end %>
+      <% if @categories.count > 0 %>
+        <h3>All Categories</h3>
+        <% @categories.each do |category| %>
+          <%= category.name %> 
+          <%= link_to 'Edit', edit_category_path(category)%>
+        <% end %>
+      <% end %>
      </div>
     </div>
   </div>

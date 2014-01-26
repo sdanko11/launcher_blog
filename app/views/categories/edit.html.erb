@@ -2,18 +2,14 @@
   <div class="large-">
     <div class="row">
       <div class="large-6 columns">
-<br>
-Edit Categories
-<hr>
-<%= form_for(@category) do |f| -%>
-        <%= f.label :name %>
-        <%= f.text_field(:name) %><br />
-<%= f.submit 'Save', class: "button" %>
-<%= link_to 'Delete', @category, method: :delete %>
-<br>
-<%=flash[:error] %>
-<% end -%>
-
+        <h1>Edit Categories</h1>
+        <%= form_for(@category) do |f| -%>
+          <%= f.label :name %>
+          <%= f.text_field(:name) %>
+          <%= f.submit 'Save', class: "button" %>
+          <%= link_to 'Delete', @category, method: :delete %>
+          <%=flash[:error] %>
+        <% end %>
       </div>
     </div>
   </div>
